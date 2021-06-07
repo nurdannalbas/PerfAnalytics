@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <h2>PerfAnalytics Client</h2>
+
+  <head>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        padding: 5px;
+        text-align: left;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button type="button" onclick="postDetail()"> Post Data Manually</button>
+    <br>
+    <table style="width:100%">
+      <tr>
+        <th>Type</th>
+        <th>Load Time</th>
+      </tr>
+      <tr>
+        <td>TTFB</td>
+        <td>
+          <p id="ttfb"></p>
+        </td>
+      </tr>
+      <tr>
+        <td>Dom Load</td>
+        <td>
+          <p id="domLoadTime"></p>
+        </td>
+      </tr>
+      <tr>
+        <td>FCP</td>
+        <td>
+          <p id="fcp"></p>
+        </td>
+      </tr>
+      <tr>
+        <td>Window Load </td>
+        <td>
+          <p id="loadTime"></p>
+        </td>
+      </tr>
+    </table>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script defer src="https://unpkg.com/web-vitals"></script>
+    <script src="./perf.js"></script>
+
+  </body>
+
+</html>
